@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+ test-container:
+  container_name: test-container
+  build:
+    context: .
+  environment:
+    - PORT=1234
+  ports:
+    - "3000:1234"
+  volumes:
+    - C:\labs:/app/logs

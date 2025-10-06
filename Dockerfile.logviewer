@@ -1,0 +1,7 @@
+FROM node:alpine
+WORKDIR /app
+COPY package.json ./
+RUN npm i
+COPY src/log-viewer.js ./
+EXPOSE 8080
+CMD ["node", "log-viewer.js"]
